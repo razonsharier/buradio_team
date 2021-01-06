@@ -1,0 +1,29 @@
+RewriteEngine on
+
+RewriteRule ^login?$ index.php
+RewriteRule ^wrong-url?$ index.php
+
+RewriteRule ^login_ajax?$ ajax/checkUser.php
+
+RewriteRule ^pages/feed?$ pages/feed.php
+RewriteRule ^pages/notification?$ pages/notification.php
+RewriteRule ^pages/mailbox?$ pages/mailbox.php
+
+RewriteRule ^pages/profile?$ pages/profile.php
+RewriteRule ^pages/posts?$ pages/posts.php
+RewriteRule ^pages/score?$ pages/score.php
+RewriteRule ^pages/activity?$ pages/activity.php
+RewriteRule ^pages/attendence?$ pages/attend.php
+RewriteRule ^pages/notice?$ pages/notice.php
+RewriteRule ^pages/schedule?$ pages/schedule.php
+RewriteRule ^pages/members?$ pages/members.php
+RewriteRule ^pages/help?$ pages/help.php
+RewriteRule ^pages/report?$ pages/report.php
+RewriteRule ^pages/settings?$ pages/settings.php
+
+RewriteRule ^pages/test?$ pages/notification.php
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^(.*)$ home.php [QSA,L]
